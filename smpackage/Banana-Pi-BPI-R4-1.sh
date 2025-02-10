@@ -117,12 +117,11 @@
 
 #删除feeds中的插件
 # rm -rf ./feeds/packages/net/mosdns
-# rm -rf ./feeds/packages/net/v2ray-geodata
+rm -rf ./feeds/packages/net/v2ray-geodata
 # rm -rf ./feeds/packages/net/geoview
 # rm -rf ./feeds/packages/net/shadowsocks-libev
 # rm -rf ./feeds/packages/net/chinadns-ng
-find ./ | grep Makefile | grep v2ray-geodata | xargs rm -f
-find ./ | grep Makefile | grep mosdns | xargs rm -f
+
 
 #克隆依赖插件
 # git clone https://github.com/xiaorouji/openwrt-passwall-packages.git package/pwpage
@@ -153,7 +152,7 @@ git clone -b 2023.10 --depth 1 https://github.com/XiaoBinin/luci-app-adguardhome
 # git clone -b main --depth 1 https://github.com/xiaorouji/openwrt-passwall2.git
 
 # #mosdns
-git clone -b v5 --depth 1 https://github.com/sbwml/luci-app-mosdns.git
+git clone -b v5 https://github.com/sbwml/luci-app-mosdns.git
 git clone -b master https://github.com/sbwml/v2ray-geodata 
 
 # #openclash
